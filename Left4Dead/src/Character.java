@@ -18,6 +18,15 @@ public class Character {
 		
 	}
 	
+	public Character(String name, double HP, double dexterity,Weapons weapon, double strength, double speed){
+		setName(name);
+		setHP(HP);
+		setDexterity(dexterity);
+		setWeapon(weapon);
+		setStrenght(strenght);
+		setSpeed(speed);
+		
+	}
 	
 	public String getName() {
 		return name;
