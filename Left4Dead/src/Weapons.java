@@ -1,7 +1,7 @@
 
 public class Weapons {
 
-//Gordan
+	//Gordan
 	
 	private String ime;	
 	private double dmg;

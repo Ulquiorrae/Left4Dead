@@ -3,12 +3,12 @@ public class Character {
 
 	//Haris
 	
-	private String name;
-	private double HP;
-	private double dexterity;
-	private Weapons weapon;
-	private double strenght;
-	private double speed;
+	protected String name;
+	protected double HP;
+	protected double dexterity;
+	protected Weapons weapon;
+	protected double strenght;
+	protected double speed;
 
 	
 	public Character(){
@@ -145,6 +145,7 @@ public class Character {
 	public double specialAttack(){
 		return 0;
 	}
+	
 	
 	public double Attack() {
 		double attack = strenght * dexterity;
