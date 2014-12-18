@@ -42,6 +42,8 @@ public class Character {
 	}
 	
 	public double getDexterity() {
+		
+		
 		return dexterity;
 	}
 	
@@ -144,11 +146,14 @@ public class Character {
 		return 0;
 	}
 	
-	public double Attack()
-	{
+	public double Attack() {
 		double attack = strenght * dexterity;
-		return attack;
+		if (dexterity < 0.5) {
+			double ddex = Math.random() * dexterity;
+			return ddex;
+		} else {
+			return attack;
+		}
 	}
-	
-}
 
+}
