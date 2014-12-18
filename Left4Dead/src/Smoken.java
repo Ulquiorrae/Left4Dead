@@ -13,7 +13,7 @@ public class Smoken extends Zombie {
 	public double specialAttack() {
 		
 		double damageSmoker;
-		damageSmoker =  4 + Math.random() * 9;
+		damageSmoker =  4 + Math.random() * 9 * super.Attack();
 		if(damageSmoker == 4) return 0;
 		
 		return damageSmoker;

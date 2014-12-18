@@ -12,7 +12,7 @@ public class Emina extends Zombie {
 	public double specialAttack() {
 		
 		double damageEmine;
-		damageEmine =  5 + Math.random() * 10;
+		damageEmine =  5 + Math.random() * 10 * super.Attack();
 		if(damageEmine == 5) return 0;
 		
 		return damageEmine;

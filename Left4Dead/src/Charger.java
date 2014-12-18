@@ -11,7 +11,7 @@ public class Charger extends Zombie {
 	public double specialAttack() {
 
 		double damageCharger;
-		damageCharger =  1 + Math.random() * 6;
+		damageCharger =  1 + Math.random() * 6 * super.Attack();
 		if(damageCharger == 1) return 0;
 		
 		return damageCharger;	

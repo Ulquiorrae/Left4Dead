@@ -11,7 +11,7 @@ public class Spitter extends Zombie {
 	public double specialAttack() {
 		
 		double damageSpitter;
-		damageSpitter =  3 + Math.random() * 8;
+		damageSpitter =  3 + Math.random() * 8 * super.Attack();
 		if(damageSpitter == 3) return 0;
 		
 		return damageSpitter;

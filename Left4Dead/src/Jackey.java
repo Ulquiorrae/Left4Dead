@@ -11,7 +11,7 @@ public class Jackey extends Zombie {
 	public double specialAttack() {
 
 		double damageJackey;
-		damageJackey =  2 + Math.random() * 7;
+		damageJackey =  2 + Math.random() * 7 * super.Attack();
 		if(damageJackey == 2) return 0;
 		
 		return damageJackey;	
