@@ -79,41 +79,5 @@ public class Character {
 		return out;
 	}
 	
-
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Character other = (Character) obj;
-		if (Double.doubleToLongBits(HP) != Double.doubleToLongBits(other.HP))
-			return false;
-		if (Double.doubleToLongBits(dexterity) != Double
-				.doubleToLongBits(other.dexterity))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (Double.doubleToLongBits(speed) != Double
-				.doubleToLongBits(other.speed))
-			return false;
-		if (Double.doubleToLongBits(strenght) != Double
-				.doubleToLongBits(other.strenght))
-			return false;
-		if (weapon == null) {
-			if (other.weapon != null)
-				return false;
-		} else if (!weapon.equals(other.weapon))
-			return false;
-		return true;
-	}
-
-
-
-	
 }
 

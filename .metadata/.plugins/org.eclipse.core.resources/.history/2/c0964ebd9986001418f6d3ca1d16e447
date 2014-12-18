@@ -79,6 +79,9 @@ public class Character {
 		return out;
 	}
 	
+	
+
+
 
 	public boolean equals(Object obj) {
 		if (this == obj)
