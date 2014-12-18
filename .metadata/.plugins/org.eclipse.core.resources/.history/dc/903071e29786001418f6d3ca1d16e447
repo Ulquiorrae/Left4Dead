@@ -1,0 +1,48 @@
+
+public class Character {
+
+	private String name;
+	private double HP;
+	private double dexterity;
+	private Weapons weapon;
+	private double strenght;
+	private double speed;
+
+	public String getName() {
+		return name;
+	}
+	
+	public double getHP() {
+		return HP;
+	}
+	
+	public double getDexterity() {
+		return dexterity;
+	}
+	
+	public double getStrenght() {
+		return strenght;
+	}
+	
+	public double getSpeed() {
+		return speed;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setHP(double hP) {
+		HP = hP;
+	}
+	
+	public void setDexterity(double dexterity) {
+		this.dexterity = dexterity;
+	}
+	
+	public void setStrenght(double strenght) {
+		this.strenght = strenght;
+	}
+	
+}
+
