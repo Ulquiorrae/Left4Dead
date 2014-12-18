@@ -18,10 +18,22 @@ public class Player extends Character {
 	}
 	
 	public void setIntel(double intel) {
-		
 		double temp;
 		temp = 0.5 + Math.random() * (2-0.5);
 		this.intel = temp;
+	}
+	
+
+	@Override
+	public String toString() {
+		String temp="Intel: "+intel;
+		return super.toString()+temp;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+	
+		return super.equals(obj);
 	}
 
 	@Override
@@ -29,6 +41,14 @@ public class Player extends Character {
 		return super.Attack() * this.intel;
 	}
 	
-	
+	public boolean escChance(Character z)
+	{
+		int escape = (int) ((this.intel*this.speed)/z.speed);
+		if (escape == 0)
+		{
+			return false;
+		}
+		return true;
+	}
 	
 }
