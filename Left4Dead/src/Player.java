@@ -13,7 +13,10 @@ public class Player extends Character {
 	}
 	
 
-	
+	public double escapeChance()
+	{
+		return intel;
+	}
 
 	
 	
