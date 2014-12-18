@@ -66,11 +66,25 @@ public class Character {
 	}
 	
 	public void setDexterity(double dexterity) {
-		this.dexterity = dexterity;
+		if (dexterity > 1 && dexterity < 0)
+		{
+			throw new IllegalArgumentException("Dexterity mistake!!!");
+		}
+		else
+		{
+			this.dexterity = dexterity;
+		}
 	}
 	
 	public void setStrenght(double strenght) {
-		this.strenght = strenght;
+		if (strenght > 10 && strenght < 0)
+		{
+			throw new IllegalArgumentException("Dexterity mistake!!!");
+		}
+		else
+		{
+			this.strenght = strenght;
+		}
 	}
 	
 	public void setSpeed(double speed) {
@@ -130,7 +144,11 @@ public class Character {
 		return 0;
 	}
 	
-	
+	public double Attack()
+	{
+		double attack = strenght * dexterity;
+		return attack;
+	}
 	
 }
 
