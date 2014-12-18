@@ -1,11 +1,14 @@
 
 public class Character {
-	private String name;
-	private double HP;
-	private double dexterity;
-	private Weapons weapon;
-	private double strenght;
-	private double speed;
+
+	//Haris
+	
+	protected String name;
+	protected double HP;
+	protected double dexterity;
+	protected Weapons weapon;
+	protected double strenght;
+	protected double speed;
 
 	
 	public Character(){
@@ -23,10 +26,12 @@ public class Character {
 		setHP(HP);
 		setDexterity(dexterity);
 		setWeapon(weapon);
-		setStrenght(strenght);
+		setStrenght(strength);
 		setSpeed(speed);
 		
 	}
+	
+	
 	
 	public String getName() {
 		return name;
@@ -37,6 +42,8 @@ public class Character {
 	}
 	
 	public double getDexterity() {
+		
+		
 		return dexterity;
 	}
 	
@@ -57,7 +64,7 @@ public class Character {
 	}
 	
 	public void setHP(double HP) {
-		HP = HP;
+		this.HP = HP;
 	}
 	
 	public void setDexterity(double dexterity) {
@@ -72,7 +79,7 @@ public class Character {
 	}
 	
 	public void setStrenght(double strenght) {
-		if (strenght > 10 && strenght < 0)
+		if (strenght > 10 || strenght < 0)
 		{
 			throw new IllegalArgumentException("Dexterity mistake!!!");
 		}
@@ -90,17 +97,26 @@ public class Character {
 		this.weapon = weapon;
 	}
 	
-	public String toString(){
-		String out = "";
-		out += "Name: " + this.name;
-		out += "\nHP: " + this.HP;
-		out += "\nDexterity: " + this.dexterity;
-		out += "\nWeapon: " + this.weapon;
-		out += "\nStrength: " + this.strenght;
-		out += "\nSpeed: " + this.speed;
-		return out;
-	}
 	
+	
+//	public String toString(){
+//		String out = "";
+//		out += "Name: " + this.name;
+//		out += "\nHP: " + this.HP;
+//		out += "\nDexterity: " + this.dexterity;
+//		out += "\nWeapon: " + this.weapon;
+//		out += "\nStrength: " + this.strenght;
+//		out += "\nSpeed: " + this.speed;
+//		return out;
+//	}
+	
+
+	@Override
+	public String toString() {
+		return "Character [name=" + name + ", HP=" + HP + ", dexterity="
+				+ dexterity + ", weapon=" + weapon + ", strenght=" + strenght
+				+ ", speed=" + speed + "]";
+	}
 
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -134,11 +150,20 @@ public class Character {
 		return true;
 	}
 
-
-	public double Attack()
-	{
+	
+	public double specialAttack(){
+		return 0;
+	}
+	
+	
+	public double Attack() {
 		double attack = strenght * dexterity;
-		return attack;
+		if (dexterity < 0.5) {
+			double ddex = Math.random() * dexterity;
+			return ddex;
+		} else {
+			return attack;
+		}
 	}
 
 }
