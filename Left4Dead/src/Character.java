@@ -1,6 +1,5 @@
 
 public class Character {
-
 	private String name;
 	private double HP;
 	private double dexterity;
@@ -114,6 +113,4 @@ public class Character {
 
 
 
-	
 }
-
